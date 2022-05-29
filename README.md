@@ -1,4 +1,7 @@
 # Electronic Horn System[📣](https://www.ti.com/lit/an/slva563/slva563.pdf?ts=1653760961598&ref_url=https%253A%252F%252Fwww.google.com%252F) 
+
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/princekanhaiya/Electronic-Horn-System)](https://github.com/princekanhaiya) [![license](https://img.shields.io/github/license/princekanhaiya/Electronic-Horn-System)](https://github.com/princekanhaiya) [![total lines](https://img.shields.io/tokei/lines/github/princekanhaiya/Electronic-Horn-System)](https://github.com/princekanhaiya) [![languages](https://img.shields.io/badge/language-C%2FC%2B%2B-blue)](https://github.com/princekanhaiya) [![languages](https://img.shields.io/github/languages/count/princekanhaiya/Electronic-Horn-System)](https://github.com/princekanhaiya) [![forks](https://img.shields.io/github/forks/princekanhaiya/Electronic-Horn-System?style=social)](https://github.com/princekanhaiya) [![forks](https://img.shields.io/badge/linkedin-Prince%20Kanhaiya-blue)](https://in.linkedin.com/in/prince-kanhaiya)
+
 This document describes the development of an electronic horn (E-Horn) for an automotive application. The E-Horn developed is for 4 wheeler applications but can be easily tweaked for 2 wheeler automotive applications.
 The design has been proven for 1 million cycles of Power ON and OFF for the required sound level (110 dB).
 
