@@ -45,12 +45,12 @@ Followings point shall be checked before the start of simulation
 - All the buttons label are mentioned below the button and shall be in off condition.
 - Status of the simulaion can be seen on `LCD screen`
 - Analog value(`Temperature sensor`) only get updated when intrrupt buttons are pressed.
-- Horn will blow only when horn button is pressed and it doesnot depends engine button at any time after powering app the module.
+- Horn will blow only when horn button is pressed, When ignition is ON
 - Potentiometer is used instead of `temperature sensor`.
 - As there is not seperate hardware/filter is used for buttons so software debouncing is used
 - Callibration is only possisble when engine is OFF.
 
 ## License ##
 
-This library is distributed under the BSD-style license found in the [LICENSE](/LICENSE.md)
+This library is distributed under the MIT license found in the [LICENSE](/LICENSE.md)
 file.
