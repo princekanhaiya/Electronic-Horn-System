@@ -38,4 +38,44 @@ int main(void){
     }
     return 0;
 }
+
+
+//Function consist of all logics of horn system
+void hornFuntions(void){
+    /*attached to PC3 and Convertion of adc value to equivalent temp not required, potentiometer use insted of temperature sensor
+    which give adc output 0-1024 */
+    hornCoilTemperature=readADC(PC3);
+    
+    //If horn coil temp less than threshold temp (HORN_COIL_TEMP_THRESHOLD=500), it shall operate normally
+    if(hornCoilTemperature <= HORN_COIL_TEMP_THRESHOLD){
+
+        //if ignition switch and horn swith is ON play/adjust the the horn tone
+        if(switchStatus.ignSwitchStatus && switchStatus.hornSwIncStatus){
+            pwm(dutyCycle);
+            if(switchStatus.hornSwIncStatus){
+                dutyCycle += (dutyCycle>=MAX_DUTY_CYCLE) ? MAX_DUTY_CYCLE : FIVE_PER_DUTY_CYCLE; //Incrementing 5% duty cycle
+                _delay_ms(200); 
+            }
+            if(switchStatus.hornSwIncStatus){
+                dutyCycle -= (dutyCycle<=0)? MIN_DUTY_CYCLE : FIVE_PER_DUTY_CYCLE; //Decrementing 5% duty cycle
+                _delay_ms(200);
+            }
+                      
+        }
+        else{
+            pwm(OFF);
+        }
+    }
+
+    //If horn coil temp exceed threshold temp, it shall operate at 10% duty cycle only
+    if(hornCoilTemperature > HORN_COIL_TEMP_THRESHOLD && hornCoilTemperature < HORN_COIL_TEMP_MAX){
+        pwm(TEN_PER_DUTY_CYCLE);     // Approximate PWM value for 10% duty cycle ie (255/100)*10=26
+    }
+
+    //If horn coil temp exceed maximum temp, it shall not operate
+    if(hornCoilTemperature >= HORN_COIL_TEMP_MAX){
+        pwm(OFF);
+    }
+}
+
  //End of the program
