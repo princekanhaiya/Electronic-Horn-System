@@ -35,6 +35,7 @@ The design has been proven for 1 million cycles of Power ON and OFF for the requ
    * [bin](/bin/)
    * [obj](/obj/)
    * [README.md](/README.md)
+   * [LICENSE.md](/LICENSE.md)
 
 ## Must Read ##
 Followings point shall be checked before the start of simulation
@@ -48,5 +49,5 @@ Followings point shall be checked before the start of simulation
 
 ## License ##
 
-This library is distributed under the BSD-style license found in the [LICENSE](./LICENSE)
+This library is distributed under the BSD-style license found in the [LICENSE](/LICENSE.md)
 file.
