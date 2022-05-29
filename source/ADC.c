@@ -12,7 +12,7 @@ void ADC_init(void){
      ADCSRA=(1<<ADEN)|(1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0); //Prescalar div factor =128
 }
 
-int readADC(uint8_t pin){
+uint8_t readADC(uint8_t pin){
     if (pin >= PC3) 
        pin -= PC3; // allow for channel or pin numbers
 
